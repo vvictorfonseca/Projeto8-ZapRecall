@@ -21,7 +21,7 @@ main {
     flex-direction: column;
     align-items: center;
     width: 203px;
-    height: 381px;
+    height: 100%;
     background-color: #FB6B6B;
 }
 
@@ -49,4 +49,72 @@ button {
     border-radius: 5px;
     color: #D70900;
     font-family: recursive;
+    margin-bottom: 87px;
+}
+
+
+/*Tela Jogo*/
+
+.topoJogo {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-top: 19px;
+    margin-bottom: 30px;
+}
+
+span {
+    margin-left: 5px;
+    font-size: 20px;
+    font-family: 'Righteous';
+    font-weight: 400;
+    color: white;
+}
+
+.fundo {
+    height: 50px;
+    width: 203px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.card1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 182px;
+    height: 40px;
+    background-color: white;
+    margin-top: 5px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px
+}
+
+.card1 ion-icon {
+    margin-right: 12px;
+}
+
+.card1 p {
+    margin-left: 6px;
+    font-family: 'Recursive';
+    font-size: 12px;
+}
+
+.Card2 {
+    width: 182px;
+    height: 80px;
+    background-color: #FFFFD4;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+p.questions {
+    font: 12px;
+    margin-top: 5px;
+    margin-left: 6px;
+    font-family: 'Recursive';
 }
