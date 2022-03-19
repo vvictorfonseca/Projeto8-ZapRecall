@@ -110,6 +110,8 @@ span {
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     margin-top: 5px;
+    display: flex;
+    position: relative;
 }
 
 p.questions {
@@ -117,4 +119,80 @@ p.questions {
     margin-top: 5px;
     margin-left: 6px;
     font-family: 'Recursive';
+}
+
+.click {
+    display: flex;
+    position: absolute;
+    width: 20px;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 7px;
+    margin-right: 8px;
+}
+
+.Card3 {
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    margin-top: 5px;
+    width: 182px;
+    height: 100%;
+    background-color: #FFFFD4;
+}
+
+.answer {
+    font: 12px;
+    margin-top: 5px;
+    margin-left: 6px;
+    font-family: 'Recursive';
+}
+
+.boxes {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 12px;
+}
+
+.box {
+    width: 55px;
+    height: 24px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.box:first-of-type {
+    background-color: #FF3030;
+}
+
+.box:last-of-type {
+    background-color: #2FBE34
+}
+
+.box:nth-child(2) {
+    background-color: #FF922E;
+}
+
+.Card3 .boxes .box p{
+    font-size: 7px;
+    font-family: 'Recursive';
+    margin: auto auto;
+    color: white;
+}
+
+.red {
+    text-decoration: line-through #FF3030;
+    color: #FF3030;
+}
+
+.yellow {
+    text-decoration: line-through #FF922E;
+    color: #FF922E;
+}
+
+.green {
+    text-decoration: line-through #2FBE34;
+    color: #2FBE34;
 }
