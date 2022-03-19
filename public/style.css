@@ -20,9 +20,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 203px;
-    height: 100%;
+    width: 375px;
+    height: 550px;
     background-color: #FB6B6B;
+    overflow-y: scroll;
+    overflow: hidden;
+    margin-bottom: 40px;
 }
 
 .raio {
@@ -31,25 +34,26 @@ main {
 }
 
 h1 {
-    width: 152px;
+    width: 130px;
     height: 35px;
     color: white;
     text-align: center;
-    font-size: 25px;
+    font-size: 36px;
     font-family: 'Righteous';
     font-weight: 400;
+    display: flex;
+    justify-content: center;
 }
 
 button {
-    margin-top: 75px;
-    height: 31px;
-    width: 141px;
+    height: 50px;
+    width: 230px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: 1px solid #D70900;
     border-radius: 5px;
     color: #D70900;
     font-family: recursive;
-    margin-bottom: 87px;
+    margin-top: 75px;
 }
 
 
@@ -72,8 +76,8 @@ span {
 }
 
 .fundo {
-    height: 50px;
-    width: 203px;
+    height: 70px;
+    width: 375px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -81,12 +85,17 @@ span {
     margin-top: 60px;
 }
 
+.fundo p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 .card1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 182px;
-    height: 40px;
+    width: 300px;
+    height: 65px;
     background-color: white;
     margin-top: 5px;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
@@ -104,7 +113,7 @@ span {
 }
 
 .Card2 {
-    width: 182px;
+    width: 300px;
     height: 80px;
     background-color: #FFFFD4;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
@@ -135,8 +144,8 @@ p.questions {
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     margin-top: 5px;
-    width: 182px;
-    height: 100%;
+    width: 300px;
+    height: 60px;
     background-color: #FFFFD4;
 }
 
@@ -168,7 +177,7 @@ p.questions {
 }
 
 .box:last-of-type {
-    background-color: #2FBE34
+    background-color: #2FBE34;
 }
 
 .box:nth-child(2) {

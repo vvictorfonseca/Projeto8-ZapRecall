@@ -13,25 +13,48 @@ export default function TelaJogo() {
         { card: "Pergunta 8", question: "Quem destrói o medalhão?", answer: "Ronald Weasley" }
     ]
 
-    const contador = 0
+    const [contador, setContador] = React.useState(0)
+
+    const [iconFotter, setIconFootter] = React.useState([])
+
+    const aumentar = () => { setContador(contador + 1) }
+
+    const icon = (icone) => { setIconFootter([...iconFotter, icone]) }
 
     return (
 
         <section className="tela">
             <div className="topoJogo">
                 <img src="./Midias/image 2.png" alt="img2"></img>
-                <span>ZapRecall</span>
+                <span> ZapRecall </span>
             </div>
 
 
-            {dados.map(elemento => <Cartas info={elemento} />)}
+            {dados.map(elemento => <Cartas aumentar={aumentar} icon={icon} info={elemento} />)}
 
+            <Footer icon = {iconFotter} contador = {contador}  />
 
-            <div className="fundo">
-                <p>{contador}/8 Concluídos </p>
-            </div>
         </section>
 
+    )
+}
+
+function Footer(props) {
+    return (
+        <div className="fundo">
+            <p>{props.contador}/8 Concluídos <br/>
+            {props.icon.map(elemento => {
+
+                if (elemento === 'red') {
+                    return <ion-icon name="close-circle-outline" style={{color:"#D70900"}}></ion-icon>
+                } else if (elemento === 'yellow') {
+                    return <ion-icon name="help-circle-outline" style={{color:"#FF922E"}}></ion-icon>
+                } else if (elemento === 'green') {
+                    return <ion-icon name="checkmark-circle-outline" style={{color:"#2FBE34"}}></ion-icon>
+                }
+            })}
+            </p>
+        </div>
     )
 }
 
@@ -44,15 +67,18 @@ function Cartas(props) {
 
     if (card === 'card1') {
 
+        const css = `card1 ${selecionado}`
+
         return (
 
-            <div className={`card1 ${selecionado}`} onClick={() => setCard("card2")}>
+            <div className={css}>
+
                 <p>{props.info.card}</p>
-                {selecionado === "" && <ion-icon name="play-outline"></ion-icon>}
+                {selecionado === "" && <ion-icon name="play-outline" onClick={() => setCard("card2")}></ion-icon>}
                 {selecionado === "red" && <ion-icon name="close-circle-outline"></ion-icon>}
                 {selecionado === "yellow" && <ion-icon name="help-circle-outline"></ion-icon>}
                 {selecionado === "green" && <ion-icon name="checkmark-circle-outline"></ion-icon>}
-                
+
             </div>
 
         )
@@ -66,22 +92,30 @@ function Cartas(props) {
         )
     } else if (card === 'card3') {
 
+
         function red() {
             setSelecionado("red")
             setCard('card1')
+            props.aumentar()
+            props.icon("red")
         }
 
         function yellow() {
             setSelecionado("yellow")
             setCard('card1')
+            props.aumentar()
+            props.icon("yellow")
         }
 
         function green() {
             setSelecionado("green")
             setCard('card1')
+            props.aumentar()
+            props.icon("green")
         }
 
         return (
+
             <div className="Card3">
                 <p className="answer">{props.info.answer}</p>
                 <div className="boxes">
@@ -97,6 +131,6 @@ function Cartas(props) {
                 </div>
             </div>
         )
-    } 
+    }
 }
 
