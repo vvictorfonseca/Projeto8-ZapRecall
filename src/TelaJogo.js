@@ -21,38 +21,91 @@ export default function TelaJogo() {
 
     const icon = (icone) => { setIconFootter([...iconFotter, icone]) }
 
+    console.log(iconFotter)
+
     return (
 
         <section className="tela">
-            <div className="topoJogo">
-                <img src="./Midias/image 2.png" alt="img2"></img>
-                <span> ZapRecall </span>
+
+            
+
+                <div className="topoJogo">
+                    <img src="./Midias/raio2.png" alt="img2"></img>
+                    <span> ZapRecall </span>
+                </div>
+            
+            <div className="conteudo">
+
+                {dados.map(elemento => <Cartas key={elemento} aumentar={aumentar} icon={icon} info={elemento} />)}
+
             </div>
-
-
-            {dados.map(elemento => <Cartas aumentar={aumentar} icon={icon} info={elemento} />)}
-
-            <Footer icon = {iconFotter} contador = {contador}  />
-
+            <Footer icon={iconFotter} contador={contador} />
         </section>
 
     )
 }
 
 function Footer(props) {
-    return (
-        <div className="fundo">
-            <p>{props.contador}/8 Concluídos <br/>
-            {props.icon.map(elemento => {
 
-                if (elemento === 'red') {
-                    return <ion-icon name="close-circle-outline" style={{color:"#D70900"}}></ion-icon>
-                } else if (elemento === 'yellow') {
-                    return <ion-icon name="help-circle-outline" style={{color:"#FF922E"}}></ion-icon>
-                } else if (elemento === 'green') {
-                    return <ion-icon name="checkmark-circle-outline" style={{color:"#2FBE34"}}></ion-icon>
-                }
-            })}
+    let redArr = []
+    let contadorArr = []
+
+    for (let i = 0; i < props.icon.length; i++) {
+
+        if (props.icon[i] === "red") {
+            redArr.push(props.icon[i])
+            contadorArr.push(props.icon[i])
+        } else {
+            contadorArr.push(props.icon[i])
+        }
+
+    }
+
+    console.log(redArr)
+    console.log(contadorArr)
+
+    let parabens = redArr.length === 0 && contadorArr.length === 8;
+    let putz = redArr.length > 0 && contadorArr.length === 8
+
+    const mensagemParabens =
+
+        <div className="caixa-mensagem">
+            <div className="caixa">
+                <img src="./Midias/party.png"></img>
+                <p><strong>Parabéns!</strong></p>
+            </div>
+            <p>Você não esqueceu de <br /> nenhum flashcard!</p>
+        </div>
+
+    const mensagemPutz =
+
+        <div className="caixa-mensagem">
+            <div className="caixa">
+                <img src="./Midias/sad.png"></img>
+                <p><strong>Putz...</strong></p>
+            </div>
+            <p>VAinda faltam alguns... <br /> Mas não desanime!</p>
+        </div>
+
+
+    return (
+
+        <div className="fundo">
+
+            {parabens && mensagemParabens}
+            {putz && mensagemPutz}
+
+            <p className="contador">{props.contador}/8 Concluídos <br />
+                {props.icon.map(elemento => {
+
+                    if (elemento === 'red') {
+                        return <ion-icon name="close-circle-outline" style={{ color: "#D70900" }}></ion-icon>
+                    } else if (elemento === 'yellow') {
+                        return <ion-icon name="help-circle-outline" style={{ color: "#FF922E" }}></ion-icon>
+                    } else if (elemento === 'green') {
+                        return <ion-icon name="checkmark-circle-outline" style={{ color: "#2FBE34" }}></ion-icon>
+                    }
+                })}
             </p>
         </div>
     )
