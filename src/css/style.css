@@ -6,6 +6,8 @@ body {
     background-color: #e5e5e5;
     font-family: 'Recursive', sans-serif;
     font-family: 'Righteous', cursive;
+    width: 100%;
+    margin: auto auto;
 }
 
 main {
@@ -21,7 +23,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 375px;
+    width: 100%;
     height: 100vh;
     background-color: #FB6B6B;
     overflow: hidden;
@@ -240,10 +242,10 @@ p.questions {
     color: #2FBE34;
 }
 
-/* FOOTER / RESULTADO */
+/* FOOTER/RESULTADO */
 
 .fundo {
-    width: 375px;
+    width: 450px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -302,4 +304,153 @@ p.questions {
     font-family: 'Recursive';
     font-size: 18px;
     line-height: 22px;
+}
+
+/* DESKTOP MEDIA-QUERY */
+
+@media screen and (min-width: 450px) {
+
+    body {
+        width: 100%;
+    }
+
+    main {
+        width: 100%;
+    }
+    
+    .tela {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 30px;
+    }
+
+    button {
+        height: 65px;
+        width: 300px;
+        font-size: 20px;
+    }
+
+    .topoJogo {
+        margin-bottom: 40px;
+    }
+
+   span {
+       font-size: 60px;
+   }
+
+   .topoJogo img {
+       width: 65px;
+   }
+
+   .card1 {
+       width: 567px;
+       height: 91px;
+       margin-top: 16px;
+   }
+
+   .card1 p {
+       font-size: 24px;
+       margin-left: 24px;
+   }
+
+   .card1 ion-icon {
+       font-size: 31px;
+       margin-right: 21px;
+   }
+
+   .Card2 {
+    width: 567px;
+    height: 100px;
+    margin-top: 16px;
+   }
+
+    .Card2 p {
+    font-size: 24px;
+    margin-left: 24px;
+    }
+
+    .click {
+        width: 21px;
+        margin-right: 31px;
+        margin-bottom: 12px;
+    }
+
+    .Card3 {
+        width: 567px;
+        height: 120px;
+        margin-top: 16px;
+    }
+    
+    .Card3 p {
+        font-size: 24px;
+        margin-left: 24px;
+    }
+
+    .card1:last-child {
+        margin-bottom: 130px;
+    }
+    
+    .Card2:last-child {
+        margin-bottom: 130px;
+    }
+    
+    .Card3:last-child {
+        margin-bottom: 130px;
+    }
+
+    .box {
+        width: 160px;
+        height: 50px;
+    }
+
+    .Card3 .boxes .box p{
+        font-size: 18px;
+    }
+    
+    .fundo {
+        width: 100%;
+    }
+
+    .fundo .contador {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 26px;
+        margin-top: 13px;
+        font-family: 'Recursive';
+        font-weight: 400;
+        line-height: 22px;
+        color: #333333;
+    }
+
+    .fundo-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: -20px;
+        margin-bottom: 20px;
+        font-size: 31px;
+    }
+
+    .caixa-mensagem p:last-of-type {
+        font-family: 'Recursive';
+        text-align: center;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 29px;
+        margin-top: 40px;
+    }
+
+    .caixa p {
+        margin-left: 13px;
+        font-family: 'Recursive';
+        font-size: 30px;
+        line-height: 22px;
+    }
+
+    .caixa .foto-caixa {
+        margin-top: -112px;
+        width: 32px;
+     }
 }
