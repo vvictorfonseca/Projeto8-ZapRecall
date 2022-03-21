@@ -18,7 +18,7 @@ export default function Cartas(props) {
 
             <div className={css}>
 
-                <p>Pergunta{idx}</p>
+                <p>Pergunta {idx}</p>
                 {selecionado === "" && <ion-icon name="play-outline" onClick={() => setCard("card2")}></ion-icon>}
                 {selecionado === "red" && <ion-icon name="close-circle-outline" style={{ color: "#D70900" }}></ion-icon>}
                 {selecionado === "yellow" && <ion-icon name="help-circle-outline" style={{ color: "#FF922E" }}></ion-icon>}
@@ -32,7 +32,7 @@ export default function Cartas(props) {
         return (
             <div className="Card2" onClick={() => setCard("card3")}>
                 <p className="questions">{info.question}</p>
-                <img className="click" src={FotoIcon} onClick={() => setCard("card3")}></img>
+                <img className="click" src={FotoIcon} alt="foto3" onClick={() => setCard("card3")}></img>
             </div>
         )
     } else if (card === 'card3') {
