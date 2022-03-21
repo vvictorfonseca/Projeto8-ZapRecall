@@ -71,7 +71,7 @@ function Footer(props) {
 
         <div className="caixa-mensagem">
             <div className="caixa">
-                <img src="./Midias/party.png"></img>
+                <img src="./Midias/party.png" className="foto-caixa"></img>
                 <p><strong>Parabéns!</strong></p>
             </div>
             <p>Você não esqueceu de <br /> nenhum flashcard!</p>
@@ -81,10 +81,10 @@ function Footer(props) {
 
         <div className="caixa-mensagem">
             <div className="caixa">
-                <img src="./Midias/sad.png"></img>
+                <img src="./Midias/sad.png" className="foto-caixa"></img>
                 <p><strong>Putz...</strong></p>
             </div>
-            <p>VAinda faltam alguns... <br /> Mas não desanime!</p>
+            <p>Ainda faltam alguns... <br /> Mas não desanime!</p>
         </div>
 
 
@@ -95,9 +95,11 @@ function Footer(props) {
             {parabens && mensagemParabens}
             {putz && mensagemPutz}
 
-            <p className="contador">{props.contador}/8 Concluídos <br />
-                {props.icon.map(elemento => {
+            <p className="contador">{props.contador}/8 Concluídos </p>
 
+            <div className="fundo-icons">
+                {props.icon.map(elemento => {
+                
                     if (elemento === 'red') {
                         return <ion-icon name="close-circle-outline" style={{ color: "#D70900" }}></ion-icon>
                     } else if (elemento === 'yellow') {
@@ -106,7 +108,7 @@ function Footer(props) {
                         return <ion-icon name="checkmark-circle-outline" style={{ color: "#2FBE34" }}></ion-icon>
                     }
                 })}
-            </p>
+            </div>
         </div>
     )
 }
@@ -128,9 +130,9 @@ function Cartas(props) {
 
                 <p>{props.info.card}</p>
                 {selecionado === "" && <ion-icon name="play-outline" onClick={() => setCard("card2")}></ion-icon>}
-                {selecionado === "red" && <ion-icon name="close-circle-outline"></ion-icon>}
-                {selecionado === "yellow" && <ion-icon name="help-circle-outline"></ion-icon>}
-                {selecionado === "green" && <ion-icon name="checkmark-circle-outline"></ion-icon>}
+                {selecionado === "red" && <ion-icon name="close-circle-outline" style={{ color: "#D70900" }}></ion-icon>}
+                {selecionado === "yellow" && <ion-icon name="help-circle-outline" style={{ color: "#FF922E" }}></ion-icon>}
+                {selecionado === "green" && <ion-icon name="checkmark-circle-outline" style={{ color: "#2FBE34" }}></ion-icon>}
 
             </div>
 

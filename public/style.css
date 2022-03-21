@@ -14,6 +14,8 @@ main {
     margin: auto auto;
 }
 
+/* TELA INÍCIO */
+
 .tela {
     margin: auto auto;
     display: flex;
@@ -56,11 +58,14 @@ button {
     border-radius: 5px;
     color: #D70900;
     font-family: recursive;
-    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 35px;
 }
 
-
 /*Tela Jogo*/
+
+/* TOPO */
 
 .topoJogo {
     height: 30px;
@@ -87,48 +92,7 @@ span {
     z-index: 10;
 }
 
-.fundo {
-    height: 60px;
-    width: 375px;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: fixed;
-    bottom: 0;
-}
-
-.fundo .contador {
-    padding-top: 15px;
-    margin-bottom: 15px;
-}
-
-.caixa-mensagem {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.caixa-mensagem p:last-of-type {
-    font-family: 'Recursive';
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21.6px;
-    margin-top: 15px;
-}
-
-.caixa {
-    display: flex;
-}
-
-.caixa p {
-    margin-left: 13px;
-    font-family: 'Recursive';
-    font-size: 18px;
-    line-height: 22px;
-}
+/*CARD 1*/
 
 .card1 {
     display: flex;
@@ -167,6 +131,8 @@ span {
     color: #333333;
 }
 
+/*CARD 2*/
+
 .Card2 {
     width: 300px;
     height: 80px;
@@ -179,10 +145,14 @@ span {
 }
 
 p.questions {
-    font: 12px;
-    margin-top: 5px;
-    margin-left: 6px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-weight: 400;
     font-family: 'Recursive';
+    font-size: 18px;
+    font-weight: 400;
+    color: #333333;
 }
 
 .click {
@@ -195,32 +165,37 @@ p.questions {
     margin-right: 8px;
 }
 
+/*CARD 3*/
+
 .Card3 {
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     margin-top: 25px;
     width: 300px;
-    height: 80px;
+    height: 100px;
     background-color: #FFFFD4;
 }
 
 .answer {
-    font: 12px;
-    margin-top: 5px;
-    margin-left: 6px;
+    font-size: 18px;
+    font-weight: 400;
+    padding-top: 15px;
+    margin-left: 15px;
     font-family: 'Recursive';
+    color: #333333;
 }
 
 .boxes {
     display: flex;
     justify-content: space-evenly;
     margin-top: 12px;
+    padding-bottom: 20px;
 }
 
 .box {
-    width: 55px;
-    height: 24px;
-    margin-bottom: 3px;
+    width: 87px;
+    height: 37px;
+    margin-top: 15px;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -240,23 +215,86 @@ p.questions {
 }
 
 .Card3 .boxes .box p{
-    font-size: 7px;
+    font-size: 12px;
     font-family: 'Recursive';
-    margin: auto auto;
+    display: flex;
+    align-items: center;
     color: white;
+    margin: auto auto;
 }
 
-.red {
+/* CARD 4 */
+
+.card1.red p {
     text-decoration: line-through #FF3030;
     color: #FF3030;
 }
 
-.yellow {
+.card1.yellow p {
     text-decoration: line-through #FF922E;
     color: #FF922E;
 }
 
-.green {
+.card1.green p {
     text-decoration: line-through #2FBE34;
     color: #2FBE34;
+}
+
+/* FOOTER / RESULTADO */
+
+.fundo {
+    width: 375px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0;
+}
+
+.fundo .contador {
+    margin-top: 13px;
+    margin-bottom: 10px;
+}
+
+.fundo-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: -4px;
+    margin-bottom: 10px;
+}
+
+.caixa-mensagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.caixa-mensagem p:last-of-type {
+    font-family: 'Recursive';
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    margin-top: 15px;
+}
+
+.caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 23px;
+    margin-top: 16px;
+}
+
+.caixa .foto-caixa {
+   margin-top: -147px;
+}
+
+.caixa p {
+    margin-left: 13px;
+    font-family: 'Recursive';
+    font-size: 18px;
+    line-height: 22px;
 }
