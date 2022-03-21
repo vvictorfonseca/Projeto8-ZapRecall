@@ -256,6 +256,11 @@ p.questions {
 .fundo .contador {
     margin-top: 13px;
     margin-bottom: 10px;
+    font-family: 'Recursive';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333333;
 }
 
 .fundo-icons {
