@@ -70,19 +70,21 @@ button {
 /* TOPO */
 
 .topoJogo {
-    height: 30px;
+    width: 100%;
     display: flex;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 25px;
     justify-content: center;
+    position: fixed;
     top: 0;
     z-index: 1;
+    background-color: #FB6B6B;
+    padding-bottom: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .topoJogo img {
     width: 45px;
-    margin-top: -145px;
+    margin-top: -118px;
 }
 
 span {
@@ -92,6 +94,11 @@ span {
     font-weight: 400;
     color: white;
     z-index: 10;
+    padding-top: 25px;
+}
+
+.conteudo {
+    margin-top: 90px;
 }
 
 /*CARD 1*/
@@ -253,6 +260,7 @@ p.questions {
     flex-direction: column;
     position: fixed;
     bottom: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .fundo .contador {
@@ -323,6 +331,7 @@ p.questions {
 
     .topoJogo {
         margin-bottom: 40px;
+        box-shadow: rgba(0, 0, 0, 0.20) 0px 3px 8px;
     }
 
    span {
@@ -331,6 +340,10 @@ p.questions {
 
    .topoJogo img {
        width: 65px;
+   }
+
+   .conteudo {
+       margin-top: 120px;
    }
 
    .card1 {
@@ -403,7 +416,7 @@ p.questions {
     }
 
     .fundo .contador {
-        padding-top: 17px;
+        padding-top: 12px;
         margin-bottom: 30px;
         font-size: 26px;
         font-family: 'Recursive';
@@ -416,7 +429,7 @@ p.questions {
         display: flex;
         justify-content: center;
         margin-top: -20px;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
         font-size: 31px;
     }
 

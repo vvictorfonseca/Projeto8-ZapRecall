@@ -34,7 +34,7 @@ export default function TelaJogo() {
 
             <div className="conteudo">
 
-                {dados.sort(embaralhar).map((elemento, idx) => <Cartas key={elemento} aumentar={aumentar} icon={icon} info={elemento} idx={idx + 1} />)}
+                {dados.sort(embaralhar).map((elemento, idx) => <Cartas aumentar={aumentar} icon={icon} info={elemento} idx={idx + 1} />)}
 
             </div>
             

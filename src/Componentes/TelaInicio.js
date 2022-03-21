@@ -1,8 +1,7 @@
 import React from "react"
+import TelaJogo from "./TelaJogo"
 
 import RaioInicio from "../Midias/raio1.png";
-
-import TelaJogo from "./TelaJogo"
 
 export default function TelaInicio() {
 

@@ -12,7 +12,7 @@ export default function Footer(props) {
 
     for (let i = 0; i < icon.length; i++) {
 
-        if (props.icon[i] === "red") {
+        if (icon[i] === "red") {
             redArr.push(icon[i])
             contadorArr.push(icon[i])
         } else {
@@ -21,7 +21,7 @@ export default function Footer(props) {
     }
 
     let parabens = redArr.length === 0 && contadorArr.length === 8;
-    let putz = redArr.length > 0 && contadorArr.length === 8
+    let putz = redArr.length > 0 && contadorArr.length === 8;
 
     const mensagemParabens =
 
