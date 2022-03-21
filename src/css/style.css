@@ -310,18 +310,6 @@ p.questions {
 
 @media screen and (min-width: 450px) {
 
-    body {
-        width: 100%;
-    }
-
-    main {
-        width: 100%;
-    }
-    
-    .tela {
-        width: 100%;
-    }
-
     h1 {
         font-size: 48px;
         margin-bottom: 30px;
@@ -415,10 +403,9 @@ p.questions {
     }
 
     .fundo .contador {
-        margin-top: 30px;
+        padding-top: 17px;
         margin-bottom: 30px;
         font-size: 26px;
-        margin-top: 13px;
         font-family: 'Recursive';
         font-weight: 400;
         line-height: 22px;
